@@ -221,7 +221,7 @@
 
 /*** Skills ***/
 #skill .progress {
-    height: 5px;
+    height: 10px;
     border-radius: 5px;
 }
 
