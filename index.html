@@ -1,913 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/rfavicon.png" type="image/png">
-	<title>Ragunath S M</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<link rel="stylesheet" href="vendors/animate-css/animate.css">
-	<link rel="stylesheet" href="vendors/flaticon/flaticon.css">
-	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/responsive.css">
-	<style>
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.9);
-}
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 80vh;
-}
-.close {
-  position: absolute;
-  top: 30px;
-  right: 45px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b14">
+<meta name="description" content="Ragunathsm Technologies builds intelligent digital products, AI-powered workflows, and next-generation web experiences.">
+<title>Ragunathsm Technologies — Build Beyond</title>
+<style>
+:root{--bg:#080b14;--panel:#101522;--text:#f4f6ff;--muted:#a4aec4;--line:rgba(255,255,255,.11);--cyan:#71f6e2;--violet:#9b8cff;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;overflow-x:hidden}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 12% 10%,rgba(90,78,220,.19),transparent 38%),radial-gradient(ellipse at 88% 24%,rgba(39,207,190,.11),transparent 34%),#080b14}.grid-bg{position:absolute;inset:0;opacity:.17;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 78%)}header{position:sticky;top:0;z-index:20;background:rgba(8,11,20,.76);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.04em;font-size:1.12rem}.brand-mark{width:34px;height:34px;border-radius:11px;background:linear-gradient(135deg,var(--cyan),var(--violet));display:grid;place-items:center;color:#08101a;font-weight:950;font-size:18px;box-shadow:0 0 28px #71f6e22b}.navlinks{display:flex;gap:28px;color:#c3c9d9;font-size:.9rem}.navlinks a:hover{color:var(--cyan)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:12px 19px;font-weight:750;font-size:.9rem;transition:.25s ease;border:1px solid transparent}.nav-cta,.btn-primary{color:#071116;background:linear-gradient(110deg,var(--cyan),#a6f9ec)}.nav-cta:hover,.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px #71f6e22b}.btn-secondary{border-color:var(--line);background:rgba(255,255,255,.035);color:var(--text)}.btn-secondary:hover{border-color:#71f6e288;transform:translateY(-2px)}.menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 11px;font-size:1.1rem}.hero{min-height:690px;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:48px;padding:88px 0 92px;position:relative}.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid #71f6e23a;border-radius:999px;background:#71f6e20b;color:#b8fff5;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:750}.pulse{width:7px;height:7px;border-radius:50%;background:var(--cyan);box-shadow:0 0 13px var(--cyan)}h1{font-size:clamp(3.1rem,6.5vw,5.9rem);line-height:.99;letter-spacing:-.075em;margin:25px 0 24px;max-width:720px} .gradient-text{background:linear-gradient(100deg,#fff 5%,var(--cyan) 48%,#b3a8ff 94%);color:transparent;background-clip:text;-webkit-background-clip:text}.hero-copy{font-size:1.1rem;color:var(--muted);max-width:570px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.micro-proof{display:flex;align-items:center;gap:13px;margin-top:36px;color:#c2c8d8;font-size:.86rem}.avatars{display:flex;padding-left:4px}.avatars span{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--bg);margin-left:-5px;background:linear-gradient(135deg,#6ce7d4,#7774d9);color:#0a1020;font-size:.66rem;font-weight:900}.hero-visual{position:relative;min-height:460px;display:grid;place-items:center}.orbit{position:absolute;width:min(100%,470px);aspect-ratio:1;border:1px solid rgba(153,164,255,.17);border-radius:50%;animation:spin 34s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid rgba(113,246,226,.16);border-radius:50%;inset:12%}.orbit:after{inset:25%;border-color:rgba(155,140,255,.22)}@keyframes spin{to{transform:rotate(360deg)}}.core{position:relative;width:210px;height:210px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 28%,#c7fff6 0,#70f1df 12%,#4943a8 48%,#12162b 72%);box-shadow:0 0 80px #7065ff33,0 0 130px #71f6e219;animation:float 5s ease-in-out infinite}.core:before{content:"";position:absolute;inset:18px;border:1px solid #ffffff4d;border-radius:50%}.core-symbol{font-size:4.4rem;color:#f6ffff;text-shadow:0 0 24px #fff;transform:rotate(-12deg)}@keyframes float{50%{transform:translateY(-12px)}}.float-card{position:absolute;padding:15px 17px;background:rgba(16,21,34,.84);border:1px solid var(--line);border-radius:17px;backdrop-filter:blur(16px);box-shadow:0 18px 55px #0005}.float-card small{display:block;color:var(--muted);font-size:.72rem}.float-card strong{font-size:1rem}.card-a{top:42px;left:0}.card-b{right:-2px;top:115px}.card-c{bottom:42px;left:10px}.tiny-icon{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:9px;background:#71f6e21c;color:var(--cyan);margin-right:8px}.stats{border-block:1px solid var(--line);padding:27px 0}.stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.stat{text-align:center;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;font-size:1.7rem;letter-spacing:-.05em}.stat span{color:var(--muted);font-size:.83rem}.section{padding:108px 0}.section-head{max-width:690px;margin:0 auto 48px;text-align:center}.kicker{color:var(--cyan);font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800}.section h2{font-size:clamp(2.2rem,4.5vw,3.7rem);line-height:1.08;letter-spacing:-.06em;margin:13px 0 18px}.section-head p,.muted{color:var(--muted)}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{padding:27px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));transition:transform .25s,border-color .25s}.service:hover{transform:translateY(-6px);border-color:#71f6e255}.service-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,#71f6e222,#9b8cff22);border:1px solid #ffffff10;font-size:1.4rem}.service h3{font-size:1.15rem;margin:22px 0 9px;letter-spacing:-.03em}.service p{color:var(--muted);font-size:.93rem;margin:0 0 20px}.learn{color:var(--cyan);font-size:.88rem;font-weight:750}.feature{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:70px}.feature-visual{min-height:410px;border:1px solid var(--line);border-radius:28px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#5549a744,transparent 55%),linear-gradient(145deg,#12182a,#0b0e18);padding:25px;display:flex;align-items:center;justify-content:center}.code-window{width:100%;max-width:440px;border-radius:17px;overflow:hidden;border:1px solid #ffffff1c;background:#090d17d9;box-shadow:0 25px 70px #0006;transform:rotate(-3deg)}.window-top{padding:13px 15px;border-bottom:1px solid var(--line);display:flex;gap:6px}.dot{width:8px;height:8px;border-radius:50%;background:#65708a}.code{padding:22px;font: .82rem/2 ui-monospace,SFMono-Regular,Menlo,monospace;color:#b5c0d8}.code .c1{color:#71f6e2}.code .c2{color:#b3a8ff}.code .c3{color:#f5bd79}.checklist{display:grid;gap:14px;margin:25px 0 30px}.check{display:flex;gap:12px;color:#d8deed}.check i{font-style:normal;flex-shrink:0;width:23px;height:23px;display:grid;place-items:center;border-radius:50%;background:#71f6e21a;color:var(--cyan);font-size:.78rem}.process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{padding:24px 20px;border-top:1px solid #71f6e25a;background:linear-gradient(180deg,#71f6e209,transparent);border-radius:3px 3px 16px 16px}.step-no{font:700 .8rem ui-monospace,monospace;color:var(--cyan)}.step h3{margin:17px 0 8px;font-size:1.03rem}.step p{margin:0;color:var(--muted);font-size:.9rem}.cta-panel{padding:60px;border:1px solid #71f6e233;border-radius:30px;background:radial-gradient(ellipse at 100% 0%,#6d65d72a,transparent 45%),linear-gradient(125deg,#121a2b,#0d111d);display:flex;align-items:center;justify-content:space-between;gap:28px}.cta-panel h2{font-size:clamp(2rem,4vw,3.3rem);max-width:660px;margin:10px 0;line-height:1.08;letter-spacing:-.06em}.cta-panel p{color:var(--muted);margin:12px 0 0}.contact-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px}.contact-info h2{font-size:3rem;line-height:1.05;letter-spacing:-.06em}.contact-item{display:flex;gap:13px;align-items:center;margin-top:22px;color:#d9deec}.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:15px;padding:27px;border:1px solid var(--line);border-radius:23px;background:#ffffff04}.field{display:grid;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;color:#d7dced}.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1px solid #ffffff1b;background:#0a0e18;color:var(--text);border-radius:11px;font:inherit;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#71f6e2a1}.field textarea{min-height:115px;resize:vertical}.form-note{grid-column:1/-1;color:var(--muted);font-size:.78rem;margin:0}footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.85rem}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-links{display:flex;gap:20px}.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:70px;gap:10px}.hero-visual{min-height:430px}.services{grid-template-columns:repeat(2,1fr)}.feature{gap:35px}.process{grid-template-columns:repeat(2,1fr)}.cta-panel{padding:38px;align-items:flex-start;flex-direction:column}.contact-layout{grid-template-columns:1fr}.navlinks{gap:17px}}
+@media(max-width:640px){.wrap{width:min(100% - 32px,var(--max))}nav{height:68px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:#0b0f1b;padding:20px 24px 24px;border-bottom:1px solid var(--line);flex-direction:column;gap:17px}.navlinks.open{display:flex}.nav-cta{display:none}.hero{padding:64px 0 45px;min-height:auto}h1{font-size:clamp(3rem,15vw,4.7rem)}.hero-copy{font-size:1rem}.hero-visual{min-height:350px;transform:scale(.91);margin:0 -15px}.core{width:165px;height:165px}.core-symbol{font-size:3.5rem}.float-card{padding:11px 12px}.card-a{top:28px;left:5px}.card-b{right:0;top:90px}.card-c{bottom:20px;left:0}.stats-row{grid-template-columns:repeat(2,1fr);row-gap:25px}.stat:nth-child(2){border:0}.section{padding:76px 0}.services{grid-template-columns:1fr}.feature{grid-template-columns:1fr}.feature-visual{min-height:320px}.process{grid-template-columns:1fr}.cta-panel{padding:28px 23px}.contact-form{grid-template-columns:1fr;padding:20px}.field.full,.form-note{grid-column:auto}.contact-info h2{font-size:2.6rem}.footer-row{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.micro-proof{align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 </style>
-
 </head>
-
 <body>
-
-	<!--================Header Menu Area =================-->
-	<header class="header_area">
-		<div class="main_menu" id="mainNav">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container box_1620">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img style="width: 150px;" src="img/Adobe Express - file.png" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse"
-						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-						aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
-							<!-- <li class="nav-item"><a class="nav-link" href="services.html">Services</a> -->
-							<!-- <li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-									aria-haspopup="true" aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Project
-											Details</a></li>
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-								</ul>
-							</li> -->
-							<li class="nav-item submenu dropdown">
-																	<a href="blog.html" class="nav-link">Blog</a>
-
-								<!-- <ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li> -->
-									<!-- <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a> -->
-									<!-- </li> -->
-								<!-- </ul> -->
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<!--================Header Menu Area =================-->
-
-	<!--================Home Banner Area =================-->
-	<section class="home_banner_area">
-		<div class="banner_inner">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6">
-						<div class="home_left_img">
-							<img src="img/banner/1.png" alt="">
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="banner_content">
-							<h5>This is me</h5>
-							<h2>Ragunath S M</h2>
-							<p>Passionate AI & Web Developer crafting intelligent digital solutions.Turning complex
-								problems into seamless user experiences.</p>
-							<a class="banner_btn" href="#">Discover Now</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Home Banner Area =================-->
-
-	<!--================Welcome Area =================-->
-	<section class="welcome_area p_120">
-		<div class="container">
-			<div class="row welcome_inner">
-				<div class="col-lg-6">
-					<div class="welcome_text">
-						<h4>About Myself</h4>
-						<p>I am a passionate and dedicated individual with a strong interest in technology, creativity,
-							and continuous learning. With a background in web development and a growing skill set in AI
-							and automation, I enjoy turning complex challenges into elegant and user-friendly solutions.
-							I believe in working with integrity, learning from every experience, and always striving to
-							improve both professionally and personally. My goal is to contribute meaningfully to
-							projects that make a difference and to grow in a dynamic, collaborative environment.</p>
-						<div class="row">
-							<div class="col-md-4">
-								<div class="wel_item">
-									<i class="lnr lnr-database"></i>
-									<h4>$0.0</h4>
-									<p>Total Donation</p>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="wel_item">
-									<i class="lnr lnr-book"></i>
-									<h4>12</h4>
-									<p>Total Projects</p>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="wel_item">
-									<i class="lnr lnr-users"></i>
-									<h4>26</h4>
-									<p>Total Volunteers</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="tools_expert">
-						<h3>Skills Expertness</h3>
-						<div class="skill_main">
-
-							<div class="skill_item">
-								<h4>REST API Integration <span class="counter">95</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-
-							<div class="skill_item">
-								<h4>PHP <span class="counter">90</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-
-							<div class="skill_item">
-								<h4>Laravel <span class="counter">85</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-
-							<div class="skill_item">
-								<h4>CodeIgniter <span class="counter">90</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-
-							<div class="skill_item">
-								<h4>AI & ML (Basics) <span class="counter">75</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-
-							<div class="skill_item">
-								<h4>MySQL / PSQL <span class="counter">80</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-
-							<div class="skill_item">
-								<h4>JavaScript <span class="counter">50</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-
-							<div class="skill_item">
-								<h4>Python (for AI tasks) <span class="counter">60</span>%</h4>
-								<div class="progress">
-									<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-										aria-valuemax="100"></div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Welcome Area =================-->
-
-	<!--================Feature Area =================-->
-	<!-- <section class="feature_area p_120">
-		<div class="container">
-			<div class="main_title">
-				<h2>offerings to my clients</h2>
-				<p>If you are looking at blank cassettes on the web, you may be very confused at the difference in
-					price. You may see some for as low as $.17 each.</p>
-			</div>
-			<div class="feature_inner row">
-				<div class="col-lg-4 col-md-6">
-					<div class="feature_item">
-						<i class="flaticon-city"></i>
-						<h4>Architecture</h4>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference
-							in price. You may see some for as low as $17 each.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="feature_item">
-						<i class="flaticon-skyline"></i>
-						<h4>Interior Design</h4>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference
-							in price. You may see some for as low as $17 each.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="feature_item">
-						<i class="flaticon-sketch"></i>
-						<h4>Concept Design</h4>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference
-							in price. You may see some for as low as $17 each.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="feature_item">
-						<i class="flaticon-city"></i>
-						<h4>Architecture</h4>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference
-							in price. You may see some for as low as $17 each.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="feature_item">
-						<i class="flaticon-skyline"></i>
-						<h4>Interior Design</h4>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference
-							in price. You may see some for as low as $17 each.</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="feature_item">
-						<i class="flaticon-sketch"></i>
-						<h4>Concept Design</h4>
-						<p>If you are looking at blank cassettes on the web, you may be very confused at the difference
-							in price. You may see some for as low as $17 each.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!--================End Feature Area =================-->
-
-	<!--================Projects Area =================-->
-	<!-- <section class="projects_area p_120">
-		<div class="container">
-			<div class="main_title">
-				<h2>Our Recent Completed Projects</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
-			</div>
-			<div class="projects_fillter">
-				<ul class="filter list">
-					<li class="active" data-filter="*"><a href="#">All Categories</a></li>
-					<li data-filter=".brand"><a href="#">Branding</a></li>
-					<li data-filter=".work"><a href="#">Creative Work </a></li>
-					<li data-filter=".web"><a href="#">Web Design</a></li>
-				</ul>
-			</div>
-			<div class="projects_inner row">
-				<div class="col-lg-4 col-sm-6 mb-4 brand web">
-					<div class="projects_item">
-						<img class="img-fluid" src="img/projects/projects-1.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>3D Helmet Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 brand work">
-					<div class="projects_item">
-						<img class="img-fluid" src="img/projects/projects-2.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>3D Helmet Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 work">
-					<div class="projects_item">
-						<img class="img-fluid" src="img/projects/projects-3.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>3D Helmet Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 brand web">
-					<div class="projects_item">
-						<img class="img-fluid" src="img/projects/projects-4.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>3D Helmet Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 brand work">
-					<div class="projects_item">
-						<img class="img-fluid" src="img/projects/projects-5.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>3D Helmet Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 brand work web">
-					<div class="projects_item">
-						<img class="img-fluid" src="img/projects/projects-6.jpg" alt="">
-						<div class="projects_text">
-							<a href="portfolio-details.html">
-								<h4>3D Helmet Design</h4>
-							</a>
-							<p>Client Project</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section> -->
-	<!--================End Projects Area =================-->
-
-	<!--================Certificate Area =================-->
-	<section class="projects_area p_120">
-		<div class="container">
-			<div class="main_title">
-				<h2>My Certificates</h2>
-				<p style="max-width: 1000px; margin: 0 auto;">
-					I have successfully completed various professional courses and certifications that reflect my
-					commitment to continuous learning and skill development. These certificates showcase my expertise in
-					web development, backend frameworks, database management, and emerging technologies like AI and
-					machine learning.
-				</p>
-			</div>
-			<div class="projects_fillter">
-				<ul class="filter list">
-					<li class="active" data-filter="*"><a href="#">All Categories</a></li>
-					<li data-filter=".google"><a href="#">Google</a></li>
-					<li data-filter=".amazon"><a href="#">Amazon</a></li>
-					<li data-filter=".tcs"><a href="#">TCS</a></li>
-					<li data-filter=".ibm"><a href="#">IBM</a></li>
-					<li data-filter=".accenture"><a href="#">Accenture</a></li>
-					<li data-filter=".infosys"><a href="#">Infosys</a></li>
-
-				</ul>
-			</div>
-			<div class="projects_inner row">
-				<div class="col-lg-4 col-sm-6 mb-4 google">
-					<div class="">
-						<img class="img-fluid" onclick="openCertPreview(this.src)" src="img/certificates/other/crash cource on python in google-1.png"
-							alt="Certificate">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 tcs">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/TCS/webpage-UI Design(Tcs-ion)_page-0001.jpg"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 google">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Google/Course Completion Certificate_page-0001.jpg"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 accenture">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Accenture/Accenture Consultant Program.jpg" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-6 mb-4 google">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Google/R_page-0001.jpg" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 google">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)"
-							src="img/certificates/Google/GoogleUXDesignCertificate_Badge_page-0001.jpg" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 amazon">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)"
-							src="img/certificates/Amazon/Amazon DSP Certification _ Learning console_page-0001.jpg"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/other/Front End Web Development Certificate GL.png"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-6 mb-4 accenture">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Accenture/Accenture Developer Program.jpg" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/other/Full stack Dev.pdf-1.png" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 ibm">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)"
-							src="img/certificates/IBM/IBM CB0101EN Certificate _ IBM SkillsBuild-1.png" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 amazon">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)"
-							src="img/certificates/Amazon/AWS Developer Learning Plan Completion Certificate.jpg" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 amazon">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)"
-							src="img/certificates/Amazon/AWS_Academy_Graduate___AWS_Academy_Cloud_Foundations_Badge20220507-46-1yi82h_page-0001.jpg"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/other/Java Programming Certificate GL.png.png"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 google">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Google/[FREE - HDconvert.com] image (7).png"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 ibm">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)"
-							src="img/certificates/IBM/IBMDeveloperSkillsNetwork CC0101EN Certificate _ ICT Academy_page-0001.jpg"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 infosys">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Infosys/infosys.jpeg" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-6 mb-4">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)"
-							src="img/certificates/Linkedin/CertificateOfCompletion_Google Ads Essential Training 2020_page-0001.jpg"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 ">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)"
-							src="img/certificates/Linkedin/CertificateOfCompletion_HTML Essential Training_page-0001.jpg"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4 tcs">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/TCS/TCS - interview Skills_page-0001.jpg" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Techgig/Screenshot 2022-03-16 173054.jpg" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Techlearn/Techlearn Fullstack.png" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Udemy/WhatsApp Image 2022-01-22 at 1.59.20 PM.jpeg"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-6 mb-4">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)"
-							src="img/certificates/Unstop Challenges/075cb7a4-ad77-4ab9-99bd-76f8a905885f.jpg" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-sm-6 mb-4">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Udemy/WhatsApp Image 2022-01-22 at 2.00.19 PM.jpeg"
-							alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-sm-6 mb-4">
-					<div class="">
-						<img class="img-fluid"  onclick="openCertPreview(this.src)" src="img/certificates/Intel/Certificate.jpeg" alt="">
-						<div class="projects_text">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Certificate Area =================-->
-
-	<!--================Testimonials Area =================-->
-	<section class="testimonials_area p_120">
-		<div class="container">
-			<div class="main_title">
-				<h2>Testimonials</h2>
-				<p>Here are a few words of appreciation and recognition I've received from clients and leadership for my
-					dedication, knowledge, and contribution to our team's success.</p>
-			</div>
-			<div class="testi_inner">
-				<div class="testi_slider owl-carousel">
-
-					<!-- Testimonial from Client -->
-					<div class="item">
-						<div class="testi_item">
-							<p>It was a pleasure collaborating with you during the project. Your professionalism,
-								technical clarity, and timely delivery made a significant impact. Communication was
-								seamless, and your ability to grasp complex requirements truly stood out. Looking
-								forward to working with you again.</p>
-							<h4>Client (Undisclosed)</h4>
-							<div>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Testimonial from Co-founder -->
-					<div class="item">
-						<div class="testi_item">
-							<p>He Praised my dedication and work ethic, stating that
-								I’ve become a valuable asset to the organization. My problem-solving mindset,
-								adaptability, and ability to work under pressure have consistently added value to the
-								team.</p>
-							<h4>Co-founder</h4>
-							<div>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<i class="fa fa-star-half-o"></i>
-							</div>
-						</div>
-					</div>
-
-					<!-- Testimonial from Founder CTO -->
-					<div class="item">
-						<div class="testi_item">
-							<p>Acknowledged me as a tireless contributor who
-								never watches the clock when it comes to delivery. He appreciated my commitment,
-								technical skills, and focus — noting me as someone who consistently exceeds expectations
-								in both effort and results.</p>
-							<h4>Founder & CTO</h4>
-							<div>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<i class="fa fa-star-half-o"></i>
-							</div>
-						</div>
-					</div>
-
-					<!-- Testimonial from Team Lead -->
-					<div class="item">
-						<div class="testi_item">
-							<p>During a recent Townhall, Publicly recognized my strong technical
-								knowledge, quick learning capabilities, and collaborative attitude. He highlighted me as
-								a dependable team player who contributes meaningfully in both development and team
-								discussions.</p>
-							<h4>MY Team Lead</h4>
-							<div>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<a href="javascript:void(0);"><i class="fa fa-star"></i></a>
-								<i class="fa fa-star-half-o"></i>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Testimonials Area =================-->
-
-	<!--================Latest Blog Area =================-->
-	<section class="latest_blog_area p_120">
-		<div class="container">
-			<div class="main_title">
-				<h2>Latest Posts from Blog</h2>
-<p>Discover fresh insights, practical tips, and thought-provoking stories from our latest blog entries. Whether you're here to learn, stay updated, or simply get inspired, our newest articles are crafted to spark your curiosity and keep you informed.</p>
-			</div>
-			<div class="row latest_blog_inner">
-				<div class="col-lg-4">
-					<div class="l_blog_item">
-						<div class="l_blog_img">
-							<img class="img-fluid" src="img/blog/my-blog/post-3-intro-1024x683.jpg" alt="">
-						</div>
-						<div class="l_blog_text">
-							<div class="date">
-								<a href="blog-detail/road-trip-essentials-2025.html">20 June, 2025 | By Ragunath S M</a>
-							</div>
-							<a href="blog-detail/road-trip-essentials-2025.html">
-								<h4>Road Trip Essentials 2025: Your Ultimate Packing List To Know</h4>
-							</a>
-							<p>Planning a road trip in 2025? Don’t leave without checking this ultimate packing list. From chargers to snacks, here’s everything you didn’t know you’d need.</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4">
-					<div class="l_blog_item">
-						<div class="l_blog_img">
-							<img class="img-fluid" src="img/blog/my-blog/Feature-P1-1-1140x720.png" alt="">
-						</div>
-						<div class="l_blog_text">
-							<div class="date">
-								<a href="blog-detail/best-affordable-designer-dupes-for-cold-climates.html">23 June, 2025 | By Ragunath S M</a>
-							</div>
-							<a href="blog-detail/best-affordable-designer-dupes-for-cold-climates.html">
-								<h4>Luxury on a Budget: 7 Best Affordable Designer Dupes for Cold Climates</h4>
-							</a>
-							<p>Want luxury style without the price tag? Explore the best affordable designer dupes and chic accessories perfect for UK fashion lovers on a budget.</p>
-						</div>
-					</div>
-				</div>
-				<!-- <div class="col-lg-4">
-					<div class="l_blog_item">
-						<div class="l_blog_img">
-							<img class="img-fluid" src="img/blog/home-blog/home-blog-2.jpg" alt="">
-						</div>
-						<div class="l_blog_text">
-							<div class="date">
-								<a href="#">25 October, 2017 | By Mark Wiens</a>
-							</div>
-							<a href="#">
-								<h4>Make Myspace Your Best Designed Space</h4>
-							</a>
-							<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk
-								jockeys spend hours in front of their desktops, while delivery people scan bar codes
-								with handhelds and workers in the field stay</p>
-						</div>
-					</div>
-				</div> -->
-				<!-- <div class="col-lg-4">
-					<div class="l_blog_item">
-						<div class="l_blog_img">
-							<img class="img-fluid" src="img/blog/home-blog/home-blog-3.jpg" alt="">
-						</div>
-						<div class="l_blog_text">
-							<div class="date">
-								<a href="#">25 October, 2017 | By Mark Wiens</a>
-							</div>
-							<a href="#">
-								<h4>Video Games Playing With Imagination</h4>
-							</a>
-							<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk
-								jockeys spend hours in front of their desktops, while delivery people scan bar codes
-								with handhelds and workers in the field stay</p>
-						</div>
-					</div>
-				</div> -->
-			</div>
-		</div>
-	</section>
-	<!--================End Latest Blog Area =================-->
-
-	<!--================Footer Area =================-->
-	<footer class="footer_area p_120">
-		<div class="container">
-			<div class="row footer_inner">
-				<div class="col-lg-5 col-sm-6">
-					<aside class="f_widget ab_widget">
-						<div class="f_title">
-							<h3>About Me</h3>
-						</div>
-						<p>Do you want to be even more successful? Learn to love learning and growth. The more effort
-							you put into improving your skills,</p>
-						<!-- <p>
-							Copyright &copy;
-							<script>document.write(new Date().getFullYear());</script> All rights reserved | This
-							template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
-								href="https://colorlib.com" target="_blank">Colorlib</a>
-						</p> -->
-					</aside>
-				</div>
-				<div class="col-lg-5 col-sm-6">
-					<aside class="f_widget news_widget">
-						<div class="f_title">
-							<h3>Newsletter</h3>
-						</div>
-						<p>Stay updated with our latest trends</p>
-						<div id="mc_embed_signup">
-							<form target="_blank"
-								action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-								method="get" class="subscribe_form relative">
-								<div class="input-group d-flex flex-row">
-									<input name="EMAIL" placeholder="Enter email address"
-										onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '"
-										required="" type="email">
-									<button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>
-								</div>
-								<div class="mt-10 info"></div>
-							</form>
-						</div>
-					</aside>
-				</div>
-				<div class="col-lg-2">
-					<aside class="f_widget social_widget">
-						<div class="f_title">
-							<h3>Follow Me</h3>
-						</div>
-						<p>Let us be social</p>
-						<ul class="list">
-							<li><a href="https://www.facebook.com/ragu.barath.37/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="https://x.com/RagunathS2700" target="_blank"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="https://www.instagram.com/smartly_ragu/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="live:.cid.2c8aeba204a29daa"><i class="fa fa-skype"></i></a></li>
-						</ul>
-					</aside>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!--================End Footer Area =================-->
-
-
-
-
-
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
-	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-	<script src="vendors/isotope/isotope-min.js"></script>
-	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-	<script src="vendors/counter-up/jquery.counterup.min.js"></script>
-	<script src="js/mail-script.js"></script>
-	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-	<script src="js/gmaps.min.js"></script>
-	<script src="js/theme.js"></script>
-<!-- Modal HTML -->
-<!-- Place this only once in your HTML -->
-<div id="certPreviewModal" style="display:none; position:fixed; z-index:10000; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); text-align:center; padding-top:5%;">
-  <span onclick="closeCertPreview()" style="position:absolute; top:20px; right:30px; font-size:40px; color:white; cursor:pointer;">&times;</span>
-  <img id="certPreviewImg" src="" style="max-width:90%; max-height:80%; border-radius:10px;">
-</div>
-
-
+<div class="ambient"><div class="grid-bg"></div></div>
+<header>
+  <nav class="wrap" aria-label="Main navigation">
+    <a class="brand" href="#home" aria-label="Nexora Labs home"><span class="brand-mark">R</span><span>RAGUNATHSM<span style="color:var(--cyan)"> TECHNOLOGIES</span></span></a>
+    <div class="navlinks" id="navlinks"><a href="#services">What we do</a><a href="#approach">Our approach</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+    <a class="nav-cta" href="#contact">Let's build <span>↗</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </nav>
+</header>
+<main>
+<section class="hero wrap" id="home">
+  <div class="hero-copy-block">
+    <div class="eyebrow"><span class="pulse"></span> AI · Engineering · Innovation</div>
+    <h1>Build what’s <span class="gradient-text">next.</span></h1>
+    <p class="hero-copy">We turn ambitious ideas into intelligent digital products. From AI-powered workflows to scalable web platforms, we engineer technology that moves your business forward.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#contact">Start a project <span>↗</span></a><a class="btn btn-secondary" href="#services">Explore capabilities <span>↓</span></a></div>
+    <div class="micro-proof"><div class="avatars"><span>N</span><span>AI</span><span>+</span></div><span>Built for bold ideas and real-world impact.</span></div>
+  </div>
+  <div class="hero-visual" aria-label="Abstract digital intelligence illustration">
+    <div class="orbit"></div><div class="core"><span class="core-symbol">✳</span></div>
+    <div class="float-card card-a"><span class="tiny-icon">⌘</span><strong>AI-native</strong><small>Intelligence by design</small></div>
+    <div class="float-card card-b"><span class="tiny-icon">↗</span><strong>Built to scale</strong><small>From idea to impact</small></div>
+    <div class="float-card card-c"><span class="tiny-icon">◈</span><strong>Human-focused</strong><small>Technology with purpose</small></div>
+  </div>
+</section>
+<div class="stats"><div class="wrap stats-row">
+  <div class="stat"><strong>AI-first</strong><span>Intelligent by design</span></div><div class="stat"><strong>End-to-end</strong><span>Idea to deployment</span></div><div class="stat"><strong>Built for scale</strong><span>Ready for what’s next</span></div><div class="stat"><strong>Human-led</strong><span>Technology with purpose</span></div>
+</div></div>
+<section class="section wrap" id="services">
+  <div class="section-head reveal"><span class="kicker">What we do</span><h2>Technology that creates <span class="gradient-text">momentum.</span></h2><p>We combine engineering, product thinking, and applied AI to solve meaningful business challenges.</p></div>
+  <div class="services">
+    <article class="service reveal"><div class="service-icon">✳</div><h3>AI & Intelligent Automation</h3><p>Practical AI assistants, agentic workflows, knowledge systems, and automation that reduce repetitive work and unlock new capabilities.</p><a class="learn" href="#contact">Explore AI solutions ↗</a></article>
+    <article class="service reveal"><div class="service-icon">⌘</div><h3>Web & Product Engineering</h3><p>Modern, responsive web applications and digital products designed around real users, reliable architecture, and business outcomes.</p><a class="learn" href="#contact">Build your product ↗</a></article>
+    <article class="service reveal"><div class="service-icon">◈</div><h3>Enterprise Integrations</h3><p>Connect platforms, APIs, and business systems to create a dependable flow of information across your operations.</p><a class="learn" href="#contact">Connect your systems ↗</a></article>
+    <article class="service reveal"><div class="service-icon">⌬</div><h3>ERP & Business Solutions</h3><p>Custom business applications, Odoo extensions, workflow modernization, and practical tools built around how your teams work.</p><a class="learn" href="#contact">Modernize operations ↗</a></article>
+    <article class="service reveal"><div class="service-icon">⟁</div><h3>Research & Prototyping</h3><p>Explore emerging technology, validate concepts, and turn promising experiments into focused, testable prototypes.</p><a class="learn" href="#contact">Explore an idea ↗</a></article>
+    <article class="service reveal"><div class="service-icon">↗</div><h3>Cloud & Scale</h3><p>Deployment-ready foundations, API design, performance improvements, and scalable systems that support your next stage of growth.</p><a class="learn" href="#contact">Plan your architecture ↗</a></article>
+  </div>
+</section>
+<section class="section" id="approach">
+  <div class="wrap feature">
+    <div class="feature-visual reveal"><div class="code-window"><div class="window-top"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><div class="code"><div><span class="c2">const</span> vision = <span class="c3">"your next big idea"</span>;</div><div><span class="c2">const</span> strategy = <span class="c1">understand</span>(vision);</div><div><span class="c2">const</span> product = <span class="c1">engineer</span>(strategy);</div><div><span class="c2">await</span> <span class="c1">validate</span>(product);</div><div><span class="c2">return</span> <span class="c3">"real-world impact"</span>;</div><br><div style="color:#7d89a4">// Better ideas deserve better execution.</div></div></div></div>
+    <div class="reveal"><span class="kicker">Our approach</span><h2>Less complexity.<br><span class="gradient-text">More possibility.</span></h2><p class="muted">Great technology starts with the problem, not the trend. We work from clear goals to thoughtful architecture and useful experiences—keeping every decision tied to what matters.</p><div class="checklist"><div class="check"><i>✓</i><span><strong>Purpose before code</strong><br><span class="muted">Define the real problem and the outcome that matters.</span></span></div><div class="check"><i>✓</i><span><strong>AI where it adds value</strong><br><span class="muted">Use intelligent tools where they make work better—not just flashier.</span></span></div><div class="check"><i>✓</i><span><strong>Built for the long term</strong><br><span class="muted">Prioritize security, maintainability, and room to grow.</span></span></div></div><a class="btn btn-secondary" href="#contact">Tell us what you’re imagining ↗</a></div>
+  </div>
+</section>
+<section class="section wrap" id="process">
+  <div class="section-head reveal"><span class="kicker">How we work</span><h2>From first thought to <span class="gradient-text">real impact.</span></h2><p>A clear, collaborative process keeps the work focused and the next step visible.</p></div>
+  <div class="process">
+    <article class="step reveal"><span class="step-no">01 / DISCOVER</span><h3>Understand</h3><p>We learn about your users, goals, constraints, and the problem worth solving.</p></article>
+    <article class="step reveal"><span class="step-no">02 / DESIGN</span><h3>Shape the solution</h3><p>We map the experience and architecture, then align on a practical plan.</p></article>
+    <article class="step reveal"><span class="step-no">03 / BUILD</span><h3>Engineer & validate</h3><p>We build in focused iterations, test assumptions, and refine with feedback.</p></article>
+    <article class="step reveal"><span class="step-no">04 / LAUNCH</span><h3>Deliver & evolve</h3><p>We prepare for launch and identify the next improvements from real usage.</p></article>
+  </div>
+</section>
+<section class="section wrap">
+  <div class="cta-panel reveal"><div><span class="kicker">Have a challenge in mind?</span><h2>Your next breakthrough starts with a conversation.</h2><p>Bring us the challenge. Together, we’ll explore what’s possible.</p></div><a class="btn btn-primary" href="#contact">Let’s talk <span>↗</span></a></div>
+</section>
+<section class="section wrap" id="contact">
+  <div class="contact-layout">
+    <div class="contact-info reveal"><span class="kicker">Contact</span><h2>Let’s make something <span class="gradient-text">meaningful.</span></h2><p class="muted">Share a little about your project. We’ll use it as a starting point for a focused conversation.</p><div class="contact-item"><span class="tiny-icon">✉</span><span>hello@ragunathsm.in</span></div><div class="contact-item"><span class="tiny-icon">⌖</span><span>Working with ambitious teams, everywhere.</span></div><p class="muted" style="font-size:.8rem;margin-top:25px">Confirm this email address is configured before publishing.</p></div>
+    <form class="contact-form reveal" id="contactForm">
+      <div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="e.g. Alex Morgan" required></div>
+      <div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" placeholder="alex@company.com" required></div>
+      <div class="field full"><label for="service">What can we help with?</label><select id="service" name="service" required><option value="">Choose a service</option><option>AI & Automation</option><option>Web Application</option><option>ERP / Odoo</option><option>System Integration</option><option>Research & Prototyping</option><option>Something else</option></select></div>
+      <div class="field full"><label for="message">Tell us about your idea</label><textarea id="message" name="message" placeholder="What are you looking to build or improve?" required></textarea></div>
+      <button class="btn btn-primary field full" type="submit">Prepare email enquiry ↗</button>
+      <p class="form-note" id="formNote">This demo opens your email app to send the enquiry. No data is stored by this page.</p>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="wrap footer-row"><a class="brand" href="#home"><span class="brand-mark">R</span><span>RAGUNATHSM<span style="color:var(--cyan)"> TECHNOLOGIES</span></span></a><span>© <span id="year"></span> Ragunathsm Technologies. Built for what’s next.</span><div class="footer-links"><a href="#services">Services</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div></div></footer>
 <script>
-  function openCertPreview(src) {
-    const modal = document.getElementById("certPreviewModal");
-    const img = document.getElementById("certPreviewImg");
-    img.src = src;
-    modal.style.display = "block";
-  }
-
-  function closeCertPreview() {
-    document.getElementById("certPreviewModal").style.display = "none";
-  }
-
-  window.addEventListener("click", function (e) {
-    const modal = document.getElementById("certPreviewModal");
-    if (e.target === modal) {
-      closeCertPreview();
-    }
-  });
+const toggle=document.getElementById('menuToggle');
+const links=document.getElementById('navlinks');
+toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕':'☰'});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);const to='hello@ragunathsm.in';const subject=encodeURIComponent('Project enquiry — '+f.get('service'));const body=encodeURIComponent('Name: '+f.get('name')+'\nEmail: '+f.get('email')+'\nService: '+f.get('service')+'\n\nProject details:\n'+f.get('message'));document.getElementById('formNote').textContent='Your email app should open with the enquiry prepared. Confirm the recipient email is configured before publishing.';window.location.href='mailto:'+to+'?subject='+subject+'&body='+body;});
 </script>
 </body>
 </html>
